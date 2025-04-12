@@ -1,4 +1,5 @@
 function adicionarTarefa() {
+    let tarefas [];
 
     // Obtém o valor do campo de entrada 
     const inputTarefa = document.getElementById("inputTarefa");
@@ -15,6 +16,8 @@ function adicionarTarefa() {
         // Exibe uma mensagem de sucesso ao adicionar a tarefa
         let mensagemSucesso = "Tarefa adicionada com sucesso!";
         mensagem.textContent = mensagemSucesso;
+
+        tarefas.push(tarefa); // Adiciona a tarefa ao array de tarefas
 
         // Cria um novo elemento de lista para a tarefa
         const listaTarefas = document.getElementById("listaTarefas");
