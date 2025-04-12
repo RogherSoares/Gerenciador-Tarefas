@@ -2,7 +2,7 @@ function adicionarTarefa() {
 
     // Obtém o valor do campo de entrada 
     let inputTarefa = document.getElementById("inputTarefa");
-    let tarefa = inputTarefa.value;
+    let tarefa = inputTarefa.value.trim(); // Remove espaços em branco no início e no final 
 
     // Verifica se o campo de entrada está vazio
     if (tarefa == "") {
