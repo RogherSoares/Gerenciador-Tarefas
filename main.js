@@ -1,6 +1,6 @@
-function adicionarTarefa() {
-    let tarefas = [];
+let tarefas = [];
 
+function adicionarTarefa() {
     // Obtém o valor do campo de entrada 
     const inputTarefa = document.getElementById("inputTarefa");
     let tarefa = inputTarefa.value.trim(); // Remove espaços em branco no início e no final 
@@ -18,6 +18,7 @@ function adicionarTarefa() {
         mensagem.textContent = mensagemSucesso;
 
         tarefas.push(tarefa); // Adiciona a tarefa ao array de tarefas
+        renderizarTarefas(); // Chama a função para renderizar as tarefas na tela
     }
 
     // Limpa o campo de entrada após adicionar a tarefa
