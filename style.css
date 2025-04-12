@@ -80,7 +80,7 @@ ol li {
 }
 button.remover {
     background-color: rgb(231, 76, 60);
-    color: #F4F0EA;
+    color: rgb(243, 243, 243);
     padding: 5px 5px;
     border: none;
     border-radius: 5px;
@@ -91,4 +91,18 @@ button.remover {
 }
 button.remover:hover {
     background-color: rgb(192, 57, 43);
+}
+button.editar {
+    background-color: rgb(155, 89, 182);
+    color: rgb(243, 243, 243);
+    padding: 5px 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.6em;
+    margin-left: 5px;
+    transition: background-color 0.3s ease;
+}
+button.editar:hover {
+    background-color: rgb(142, 68, 173);
 }

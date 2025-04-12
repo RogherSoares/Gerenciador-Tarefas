@@ -34,12 +34,20 @@ function renderizarTarefas() {
         let novaTarefa = document.createElement("li");
         novaTarefa.textContent = tarefas[i]; // Define o texto do novo elemento de lista como a tarefa atual
 
+        // Cria um botão para remover a tarefa
         let botaoRemover = document.createElement("button");
         botaoRemover.className = "remover";
         botaoRemover.textContent = "Remover";
         botaoRemover.onclick = () => removerTarefa(i); // Adiciona um evento de clique ao botão para remover a tarefa correspondente
+
+        // Cria um botão para editar a tarefa
+        let botaoEditar = document.createElement("button");
+        botaoEditar.className = "editar";
+        botaoEditar.textContent = "Editar";
+        botaoEditar.onclick = () => editarTarefa(i); // Adiciona um evento de clique ao botão para editar a tarefa correspondente
         
         novaTarefa.appendChild(botaoRemover);
+        novaTarefa.appendChild(botaoEditar); 
         listaTarefas.appendChild(novaTarefa);
     }
 }
@@ -47,4 +55,12 @@ function renderizarTarefas() {
 function removerTarefa (i) {
     tarefas.splice(i, 1); // Remove a tarefa do array de tarefas
     renderizarTarefas(); // Chama a função para renderizar as tarefas na tela novamente
+}
+// Função para editar uma tarefa
+function editarTarefa(i) {
+    let tarefaEditada = prompt("Digite a nova tarefa:"); // Exibe um prompt para o usuário inserir a nova tarefa
+    if (tarefaEditada.trim() !== "") {
+        tarefas[i] = tarefaEditada; // Atualiza a tarefa no array de tarefas
+        renderizarTarefas(); // Chama a função para renderizar as tarefas na tela novamente
+    }
 }
