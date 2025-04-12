@@ -5,5 +5,10 @@ function adicionarTarefa() {
     let tarefa = inputTarefa.value;
     document.getElementById("mensagem").textContent = tarefa;
 
+    let listaTarefas = document.getElementById("listaTarefas");
+    let novaTarefa = document.createElement("li");
+
+    listaTarefas.appendChild(novaTarefa);
+
     inputTarefa.value = ""; // Limpa o campo de entrada após adicionar a tarefa
 }
