@@ -12,10 +12,12 @@ function adicionarTarefa() {
         // Exibe uma mensagem de erro se o campo estiver vazio
         let mensagemErro = "Por favor, insira uma tarefa.";
         mensagem.textContent = mensagemErro;
+        mensagem.style.color = "rgb(231, 76, 60)"; // Define a cor da mensagem como vermelho
     } else {
         // Exibe uma mensagem de sucesso ao adicionar a tarefa
         let mensagemSucesso = "Tarefa adicionada com sucesso!";
         mensagem.textContent = mensagemSucesso;
+        mensagem.style.color = "rgb(46, 204, 113)"; // Define a cor da mensagem como verde
 
         tarefas.push(tarefa); // Adiciona a tarefa ao array de tarefas
         renderizarTarefas(); // Chama a função para renderizar as tarefas na tela
