@@ -1,43 +1,66 @@
-# 📝 Gerenciador de Tarefas
+# 🧠 Gerenciador de Tarefas
 
-Este é um projeto simples de **gerenciador de tarefas** desenvolvido como parte da minha jornada de estudos em desenvolvimento web. A ideia surgiu enquanto acompanhava as aulas da [Rafaella Ballerini](https://www.youtube.com/@RafaellaBallerini) no YouTube, e tem como objetivo colocar em prática os conhecimentos adquiridos em **HTML**, **CSS** e **JavaScript**.
-
-## 💡 Objetivo
-
-O principal objetivo deste projeto é **exercitar e reforçar** habilidades fundamentais em front-end, como:
-
-- Estruturação com HTML5
-- Estilização com CSS3 (foco em design clean e moderno)
-- Lógica básica com JavaScript (manipulação do DOM, interações simples)
-
-## 🎯 Funcionalidade atual
-
-- Interface visual para gerenciar tarefas
-- Botão para adicionar tarefas (em desenvolvimento)
-- Mensagem de confirmação ao adicionar tarefa
-
-## 🎨 Estilo
-
-A interface foi criada com foco em uma paleta de cores **clean e moderna**, utilizando tons suaves de cinza, azul e branco para proporcionar uma boa experiência visual.
-
-## 🚀 Próximos passos
-
-- Permitir adicionar múltiplas tarefas dinamicamente
-- Marcar tarefas como concluídas
-- Remover tarefas da lista
-- Salvar tarefas no localStorage
-- Melhorar a responsividade e usabilidade
-
-## 📚 Tecnologias utilizadas
-
-- HTML5
-- CSS3
-- JavaScript (puro)
-
-## 👨‍💻 Projeto pessoal
-
-Este projeto está sendo desenvolvido com fins **educacionais** e é parte do meu processo de aprendizado. Toda contribuição, sugestão ou feedback é muito bem-vinda!
+Projeto pessoal desenvolvido com o objetivo de praticar os conceitos aprendidos durante minha jornada de estudos em **HTML, CSS e JavaScript**, com base nas video aulas da [Rafaella Ballerini](https://www.youtube.com/@RafaellaBallerini).
 
 ---
 
-📌 _Desenvolvido com dedicação e curiosidade por alguém em constante evolução._
+## 🎯 Objetivo
+
+Construir uma aplicação web simples e funcional para gerenciar tarefas do dia a dia, aplicando os conhecimentos adquiridos em front-end.
+
+---
+
+## 🛠️ Funcionalidades
+
+- ✅ Adicionar tarefas dinamicamente
+- ✏️ Editar tarefas já cadastradas
+- 🗑️ Remover tarefas individualmente
+- 🧹 Limpar toda a lista de tarefas
+- 🎯 Mensagens de sucesso/erro em tempo real
+- 🧠 Interface responsiva e moderna com **design clean**
+
+---
+
+## 💻 Tecnologias utilizadas
+
+- **HTML5**
+- **CSS3**
+- **JavaScript (puro)**
+
+---
+
+## 🎨 Estilo visual
+
+A interface segue uma paleta de cores **moderna e clean**, com foco em acessibilidade e leveza visual:
+
+| Elemento               | Cor (RGB)             |
+|------------------------|-----------------------|
+| Texto principal        | `rgb(61, 61, 61)`     |
+| Fundo do body          | `rgb(243, 243, 243)`  |
+| Botão principal        | `rgb(52, 152, 219)`   |
+| Edição de tarefa       | `rgb(155, 89, 182)`   |
+| Remoção de tarefa      | `rgb(231, 76, 60)`    |
+
+---
+
+## 📌 Como usar
+
+1. Clone o repositório
+2. Abra o arquivo `index.html` no navegador
+3. Comece a adicionar, editar e remover suas tarefas 🧠
+
+---
+
+## 🚀 Futuras melhorias
+
+- [ ] Salvar tarefas com **localStorage**
+- [ ] Adicionar marcação de tarefas concluídas
+- [ ] Filtros por status (todas, concluídas, pendentes)
+- [ ] Adicionar animações e feedbacks visuais
+
+---
+
+### 👨‍💻 Autor
+
+Desenvolvido com dedicação por alguém em constante aprendizado.  
+Contribuições, sugestões e feedbacks são sempre bem-vindos! 💜
