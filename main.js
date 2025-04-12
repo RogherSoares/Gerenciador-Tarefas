@@ -24,6 +24,7 @@ function adicionarTarefa() {
     // Limpa o campo de entrada após adicionar a tarefa
     inputTarefa.value = "";
 }
+// Função para renderizar as tarefas na tela
 function renderizarTarefas() {
     // Cria um novo elemento de lista para a tarefa e o adiciona à lista
     const listaTarefas = document.getElementById("listaTarefas");
@@ -32,6 +33,12 @@ function renderizarTarefas() {
     for(let i = 0; i < tarefas.length; i++) {
         let novaTarefa = document.createElement("li");
         novaTarefa.textContent = tarefas[i]; // Define o texto do novo elemento de lista como a tarefa atual
+
+        let botaoRemover = document.createElement("button");
+        botaoRemover.className = "remover";
+        botaoRemover.textContent = "Remover";
+        
+        novaTarefa.appendChild(botaoRemover);
         listaTarefas.appendChild(novaTarefa);
     }
 }

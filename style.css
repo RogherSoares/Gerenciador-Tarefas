@@ -48,9 +48,11 @@ button:hover {
     background-color: rgb(41, 128, 185);
 }
 input[type="text"] {
-    width: 100%;
+    width: 80%;
+    max-width: 500px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     padding: 10px;
-    margin: 10px 0;
     border: 2px solid rgb(155, 89, 182);
     border-radius: 5px;
     font-size: 1em;
@@ -75,4 +77,18 @@ ol li {
     margin: 5px 0;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+button.remover {
+    background-color: rgb(231, 76, 60);
+    color: #F4F0EA;
+    padding: 5px 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.6em;
+    margin-left: 5px;
+    transition: background-color 0.3s ease;
+}
+button.remover:hover {
+    background-color: rgb(192, 57, 43);
 }
