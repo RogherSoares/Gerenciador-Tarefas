@@ -13,18 +13,15 @@ function adicionarTarefa() {
         // Exibe uma mensagem de sucesso ao adicionar a tarefa
         let mensagemSucesso = "Tarefa adicionada com sucesso!";
         document.getElementById("mensagem").textContent = mensagemSucesso;
+
+        // Cria um novo elemento de lista para a tarefa
+        let listaTarefas = document.getElementById("listaTarefas");
+        let novaTarefa = document.createElement("li");
+
+        // Adiciona a tarefa à lista
+        novaTarefa.textContent = tarefa;
+        listaTarefas.appendChild(novaTarefa);
     }
-
-    // Cria um novo elemento de lista para a tarefa
-    let listaTarefas = document.getElementById("listaTarefas");
-    let novaTarefa = document.createElement("li");
-
-
-
-    // Adiciona a tarefa à lista
-    novaTarefa.textContent = tarefa;
-
-    listaTarefas.appendChild(novaTarefa);
 
     // Limpa o campo de entrada após adicionar a tarefa
     inputTarefa.value = "";
