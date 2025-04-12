@@ -64,3 +64,9 @@ function editarTarefa(i) {
         renderizarTarefas(); // Chama a função para renderizar as tarefas na tela novamente
     }
 }
+function limparLista () {
+    tarefas.length = 0; // Limpa o array de tarefas
+    renderizarTarefas(); // Chama a função para renderizar as tarefas na tela novamente
+    const mensagem = document.getElementById("mensagem");
+    mensagem.textContent = "Lista limpa com sucesso!"; // Exibe uma mensagem de sucesso ao limpar a lista
+}
