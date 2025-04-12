@@ -27,10 +27,11 @@ function adicionarTarefa() {
 function renderizarTarefas() {
     // Cria um novo elemento de lista para a tarefa e o adiciona à lista
     const listaTarefas = document.getElementById("listaTarefas");
+    listaTarefas.innerHTML = ""; // Limpa a lista antes de adicionar as tarefas novamente
 
     for(let i = 0; i < tarefas.length; i++) {
         let novaTarefa = document.createElement("li");
-        novaTarefa.textContent = tarefa;
+        novaTarefa.textContent = tarefas[i]; // Define o texto do novo elemento de lista como a tarefa atual
         listaTarefas.appendChild(novaTarefa);
     }
 }
