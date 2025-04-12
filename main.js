@@ -1,5 +1,5 @@
 function adicionarTarefa() {
-    let tarefas [];
+    let tarefas = [];
 
     // Obtém o valor do campo de entrada 
     const inputTarefa = document.getElementById("inputTarefa");
@@ -18,16 +18,18 @@ function adicionarTarefa() {
         mensagem.textContent = mensagemSucesso;
 
         tarefas.push(tarefa); // Adiciona a tarefa ao array de tarefas
-
-        // Cria um novo elemento de lista para a tarefa
-        const listaTarefas = document.getElementById("listaTarefas");
-        let novaTarefa = document.createElement("li");
-
-        // Adiciona a tarefa à lista
-        novaTarefa.textContent = tarefa;
-        listaTarefas.appendChild(novaTarefa);
     }
 
     // Limpa o campo de entrada após adicionar a tarefa
     inputTarefa.value = "";
+}
+function renderizarTarefas() {
+    // Cria um novo elemento de lista para a tarefa e o adiciona à lista
+    const listaTarefas = document.getElementById("listaTarefas");
+
+    for(let i = 0; i < tarefas.length; i++) {
+        let novaTarefa = document.createElement("li");
+        novaTarefa.textContent = tarefa;
+        listaTarefas.appendChild(novaTarefa);
+    }
 }
