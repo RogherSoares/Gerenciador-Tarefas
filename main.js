@@ -37,8 +37,14 @@ function renderizarTarefas() {
         let botaoRemover = document.createElement("button");
         botaoRemover.className = "remover";
         botaoRemover.textContent = "Remover";
+        botaoRemover.onclick = () => removerTarefa(i); // Adiciona um evento de clique ao botão para remover a tarefa correspondente
         
         novaTarefa.appendChild(botaoRemover);
         listaTarefas.appendChild(novaTarefa);
     }
+}
+// Função para remover uma tarefa
+function removerTarefa (i) {
+    tarefas.splice(i, 1); // Remove a tarefa do array de tarefas
+    renderizarTarefas(); // Chama a função para renderizar as tarefas na tela novamente
 }
