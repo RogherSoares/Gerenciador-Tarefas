@@ -30,7 +30,7 @@ function renderizarTarefas() {
     const listaTarefas = document.getElementById("listaTarefas");
     listaTarefas.innerHTML = ""; // Limpa a lista antes de adicionar as tarefas novamente
 
-    for(let i = 0; i < tarefas.length; i++) {
+    for (let i = 0; i < tarefas.length; i++) {
         let novaTarefa = document.createElement("li");
         novaTarefa.textContent = tarefas[i]; // Define o texto do novo elemento de lista como a tarefa atual
 
@@ -45,14 +45,23 @@ function renderizarTarefas() {
         botaoEditar.className = "editar";
         botaoEditar.textContent = "Editar";
         botaoEditar.onclick = () => editarTarefa(i); // Adiciona um evento de clique ao botão para editar a tarefa correspondente
-        
+
+        // Exibe ou oculta o botão "Limpar Tudo"
+        const botaoLimpar = document.getElementById("botaoLimpar");
+        if (tarefas.length > 0) {
+            botaoLimpar.style.display = "inline-block";
+        } else {
+            botaoLimpar.style.display = "none";
+        }
+
+
         novaTarefa.appendChild(botaoRemover);
-        novaTarefa.appendChild(botaoEditar); 
+        novaTarefa.appendChild(botaoEditar);
         listaTarefas.appendChild(novaTarefa);
     }
 }
 // Função para remover uma tarefa
-function removerTarefa (i) {
+function removerTarefa(i) {
     tarefas.splice(i, 1); // Remove a tarefa do array de tarefas
     renderizarTarefas(); // Chama a função para renderizar as tarefas na tela novamente
 }
@@ -64,9 +73,10 @@ function editarTarefa(i) {
         renderizarTarefas(); // Chama a função para renderizar as tarefas na tela novamente
     }
 }
-function limparLista () {
+function limparLista() {
     tarefas.length = 0; // Limpa o array de tarefas
     renderizarTarefas(); // Chama a função para renderizar as tarefas na tela novamente
     const mensagem = document.getElementById("mensagem");
     mensagem.textContent = "Lista limpa com sucesso!"; // Exibe uma mensagem de sucesso ao limpar a lista
+    botaoLimpar.style.display = "none"; // Oculta o botão "Limpar Tudo"
 }
